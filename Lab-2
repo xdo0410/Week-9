@@ -1,0 +1,47 @@
+
+public class Dice 
+{
+	int number1,number2;
+	
+	public Dice()
+	{
+		roll();
+	}
+	
+	public void roll()
+	{
+		number1 = (int)(Math.random()*6)+1;
+		number2 = (int)(Math.random()*6)+1;
+	}
+	
+	public int value1()
+	{
+		return number1;
+	}
+	
+	public int value2()
+	{
+		return number2;
+	}
+	
+	public int getTotal()
+	{
+		return number1 + number2;
+	}
+}
+
+
+
+
+
+public class mainDice 
+{
+	public static void main(String[] arg)
+	{
+		Dice dice;
+		dice = new Dice();
+		
+		System.out.println(dice.getTotal());
+		
+	}
+}
