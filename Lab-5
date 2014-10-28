@@ -1,0 +1,64 @@
+
+
+
+public class Dice 
+{
+	int number1,number2;
+	static int num;
+	int isEvenNumber;
+	
+	public Dice()
+	{
+		roll();
+	}
+	
+	public void roll()
+	{
+		number1 = (int)(Math.random()*6)+1;
+		number2 = (int)(Math.random()*6)+1;
+	}
+	
+	public int value1()
+	{
+		return number1;
+	}
+	
+	public int value2()
+	{
+		return number2;
+	}
+	
+	public int getTotal()
+	{
+		return num = number1 + number2;
+	}
+	
+	public static boolean isEven()
+	{
+		boolean isEvenNumber = false;
+		
+		if ((num % 2) == 0)
+		{
+			isEvenNumber = true;
+		}
+		return isEvenNumber;
+	}
+}
+
+
+
+
+
+
+public class mainDice 
+{
+	public static void main(String[] arg)
+	{
+		Dice dice;
+		dice = new Dice();
+		
+		System.out.println("Here is the number" + " " + dice.getTotal());
+		
+		System.out.println("And it is even?" + " " + dice.isEven());
+	}
+}
